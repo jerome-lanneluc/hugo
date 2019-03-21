@@ -1,0 +1,138 @@
+{
+  "src_folders": [
+    "nightwatch-tests"
+  ],
+
+  "output_folder": "reports",
+  "custom_commands_path": "nightwatch-commands",
+  "custom_assertions_path": "",
+  "page_objects_path": "nightwatch-pages",
+  "globals_path": "globals_standalone.js",
+
+  "test_settings": {
+    "default": {
+      "selenium_port": 9515,
+      "selenium_host": "localhost",
+      "default_path_prefix": "",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "--no-sandbox"
+          ]
+        },
+        "acceptSslCerts": true
+      },
+      "globals": {
+        "waitForConditionTimeout": 30000
+      }
+    },
+
+    "dev": {
+      "launch_url": "https://dev.console.test.cloud.ibm.com",
+      "globals": {
+        "env_id": "ibm:ys1:us-south",
+        "toolchain_guid": "004d6afa-f235-4105-aa9d-509fc0e33de9",
+        "readonly_pipeline_guid": "d0015ba3-1552-442e-98ea-9ad4db0fbe6f",
+        "target_resource_group": "Default",
+        "cf_api_url": "https://api.stage1.ng.bluemix.net",
+        "alternate_region" : "ibm:yp:us-south",
+        "alternate_target_resource_group": "default",
+        "alternate_cluster_namespace" : "ys1-dev"
+      }
+    },
+
+    "integration": {
+      "launch_url": "https://test.cloud.ibm.com",
+      "globals": {
+        "env_id": "ibm:ys1:us-south",
+        "toolchain_guid": "ff7135cd-98a6-40ad-9e14-cda9b4df5ee9",
+        "readonly_pipeline_guid": "ac51035b-3756-49f1-b759-aa7d81e5ad43",
+        "target_resource_group": "Default",
+        "cf_api_url": "https://api.stage1.ng.bluemix.net",
+        "alternate_region" : "ibm:yp:us-south",
+        "alternate_target_resource_group": "default",
+        "alternate_cluster_namespace" : "ys1-int"
+      }
+    },
+    
+    "prod-eu-de": {
+      "launch_url": "https://cloud.ibm.com",
+      "globals": {
+        "env_id": "ibm:yp:eu-de",
+        "toolchain_guid": "dbd68f17-d07b-444c-a926-1a9f91af0633",
+        "readonly_pipeline_guid": "ceee151c-2ffa-4bb3-92e9-3d4349c14191",
+        "target_resource_group": "default",
+        "cf_api_url": "https://api.eu-de.bluemix.net",
+        "verify_cf_app_access": true
+      }
+    },
+
+    "prod-eu-gb": {
+      "launch_url": "https://cloud.ibm.com",
+      "globals": {
+        "env_id": "ibm:yp:eu-gb",
+        "toolchain_guid": "6308dbfb-d271-4379-8213-b675e2beecbe",
+        "readonly_pipeline_guid": "bccd7538-82d0-43ac-8e9d-a8a8d916a46f",
+        "target_resource_group": "default",
+        "cf_api_url": "https://api.eu-gb.bluemix.net",
+        "verify_cf_app_access": true
+      }
+    },
+    
+    "prod-jp-tok": {
+      "launch_url": "https://cloud.ibm.com",
+      "globals": {
+        "env_id": "ibm:yp:jp-tok",
+        "toolchain_guid": "30b9159f-e7d3-43da-8187-145ae1522529",
+        "readonly_pipeline_guid": "66ced5e1-8a2c-4138-a263-45da5b5dafc5",
+        "target_resource_group": "default",
+        "cf_api_url": "https://api.au-syd.bluemix.net",
+        "verify_cf_app_access": true,
+        "alternate_region" : "ibm:yp:us-south",
+        "alternate_target_resource_group": "default",
+        "alternate_cluster_namespace" : "prod-jp-tok"
+      }
+    },
+
+    "prod-us-south": {
+      "launch_url": "https://cloud.ibm.com",
+      "globals": {
+        "env_id": "ibm:yp:us-south",
+        "toolchain_guid": "636eb1a3-5141-4a0b-a190-e65db5109f9a",
+        "readonly_pipeline_guid": "6aa5c42a-c03e-4df5-8b37-b57bdf182d03",
+        "target_resource_group": "default",
+        "cf_api_url": "https://api.ng.bluemix.net",
+        "verify_cf_app_access": true
+      }
+    },
+
+    "prod-us-east": {
+      "launch_url": "https://cloud.ibm.com",
+      "globals": {
+        "env_id": "ibm:yp:us-east",
+        "toolchain_guid": "603478d8-ec25-4cd9-85a5-21732c3f0b48",
+        "readonly_pipeline_guid": "62c37603-b1c2-41b1-83e6-cdf259487079",
+        "target_resource_group": "default",
+        "cf_api_url": "https://api.us-east.bluemix.net",
+        "verify_cf_app_access": true,
+        "alternate_region" : "ibm:yp:us-south",
+        "alternate_target_resource_group": "default",
+        "alternate_cluster_namespace" : "prod-us-east"
+      }
+    },
+
+    "prod-bluemix-net-us-east": {
+      "launch_url": "https://console.bluemix.net",
+      "globals": {
+        "env_id": "ibm:yp:us-east",
+        "toolchain_guid": "603478d8-ec25-4cd9-85a5-21732c3f0b48",
+        "readonly_pipeline_guid": "62c37603-b1c2-41b1-83e6-cdf259487079",
+        "target_resource_group": "default",
+        "cf_api_url": "https://api.us-east.bluemix.net",
+        "verify_cf_app_access": true
+      }
+    }
+
+  }
+}
